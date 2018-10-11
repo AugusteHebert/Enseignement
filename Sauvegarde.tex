@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english,francais]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\df}[1]{{\emph{#1}}}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Mat}{\operatorname{Mat}}
+\newcommand{\id}{\operatorname{Id}}
+
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\tr}{\operatorname{tr}}
+
+\newcommand{\s}{\mathfrak{S}}
+
+\newcommand{\isom}{\stackrel{\sim}{\longrightarrow}}
+
+\newcommand{\inj}{\hookrightarrow}
+\usepackage{stmaryrd}
+
+\newcommand{\SL}{\text{SL}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\M}{\text{M}}
+\newcommand{\mat}[4]{\begin{pmatrix}
+#1 & #2 \\
+#3 & #4
+\end{pmatrix}}
+\newcommand{\eps}{\varepsilon}
+
+%\newtheorem{enonce}{Exercice}
+%\newenvironment{exo}[0]{\begin{enonce}\rm}{\smallskip\end{enonce}}
+\newcounter{question}
+\newcounter{sousquestion}
+\newtheorem{enonce}{Exercice}
+\newenvironment{exo}[0]{\begin{enonce}{\bf ---}\rm\setcounter{question}{1}}{\end{enonce}}
+\newcommand{\quest}{{\setcounter{sousquestion}{1}\vspace{0.1cm}\bf \arabic{question}.\hspace{0.1cm}}\addtocounter{question}{1}}
+\newcommand{\sousq}{{\hspace{0.5cm}\vspace{0.1cm}\bf \alph{sousquestion}.\hspace{0.1cm}}\addtocounter{sousquestion}{1}}
+
+
+
+\begin{document}
+
+\noindent \'ENS de Lyon\hfill \\
+2018-2019\hfill Agrégation\
+\smallskip
+\begin{center}
+{\sc
+Leçon 120 : Anneaux $\Z/n\Z$. Applications.}
+\end{center}
+\smallskip
+
+
+\begin{exo}
+Soit $n\in \N^*$. Déterminer les idéaux de $\Z/n\Z$. L'anneau $\Z/n\Z$ est-il principal ?
+\end{exo}
+
+\begin{exo}
+Donner l'écriture décimal de $\frac{5}{7}$.
+\end{exo}
+
+\begin{exo}
+Soient $n,n'\in \N$. Déterminer tous les morphismes d'anneaux de $\Z/n\Z$ dans $\Z/n'\Z$.
+\end{exo}
+
+\begin{exo}
+Résoudre $x^2-4x+6$ dans $\Z/12 \Z$.
+\end{exo}
+
+\begin{exo}
+ Soit $n\in \N^*$. Combien y a-t-il d'idempotents (i.e de $x$ tels que $x^2=x$) dans $\Z/n\Z$.
+\end{exo}
+
+\begin{exo}
+Résoudre $x^2+y^2=7 z^2$, d'inconnue $(x,y,z)\in \Z^3$.
+\end{exo}
+
+\begin{exo}
+Montrer que l'equation $(x^2-2)(x^2-3)(x^2-6)$ d'inconnue $x$ admet une solution dans $\mathbb{F}_p$ pour tout nombre premier $p$, mais qu'elle n'admet aucune solution sur $\Z$.
+\end{exo}
+
+\begin{exo}
+Soit $n\in \N_{\geq 3}$.
+
+\quest Montrer que pour tout $x\in (\Z/2^n\Z)^\times$, $x^{2^{n-2}}=1$. Le groupe $(\Z/2^n\Z )\times$ est-il cyclique ?
+
+\quest Montrer que $5^{2^n}\equiv 1+2^{n+2}[2^{n+3}]$.
+
+\quest On identifie $\Z/2\Z$ à $\{+,-\}$. Soit $\phi:\Z/2\Z\times \Z/2^{n-2}\Z\rightarrow (\Z/2^n\Z)^\times$ définie par $\phi((\epsilon,k))=\epsilon 5^k$. Montrer que $\phi$ est bien définie et que c'est un isomorphisme.
+
+\quest Soit $p$ un nombre premier impair. Montrer que pour tout $n\in \N$, il existe $\ell$ premier à $p$ tel que $(1+p)^{p^n}=1+\ell p^{n+1}$. Quelle est la structure de $(\Z/p^k\Z)^\times$.
+\end{exo}
+
+\begin{exo}
+Soit $n\in \N^*$. Montrer que $\mathrm{Aut}_{\mathrm{Gr}}(\Z/n\Z)\simeq (\Z/n\Z)^\times$. Déterminer $\mathrm{Aut}_{\mathrm{Gr}}((\Z/n\Z)^\times)$.
+\end{exo}
+
+\begin{exo} (RSA, voir Demazure, Cours d'algèbre, page 59)
+Soient $p,q$ des nombres premiers distincts. Soit $n=pq$.
+
+\quest Déterminer $\varphi(n)$, où $\varphi$ est l'indicatrice d'Euler.
+
+\smallskip 
+
+Soit  $e\in \llbracket 1, \varphi(n)\rrbracket$ tel que $e\wedge \varphi(n)=1$. 
+
+\quest Soit $M\in \llbracket 1,n\rrbracket$ tel que $C\wedge n=1$. Soit $C=M^e$. Comment déterminer $M$ à partir de $C$ ? 
+\end{exo}
+
+\end{document}
